@@ -1,0 +1,91 @@
+# palindrome checker
+
+def isPalindrome(s): 
+    return s == s[::-1] 
+  
+  
+# Driver code 
+s = "suban"
+ans = isPalindrome(s) 
+  
+if ans: 
+    print("Yes") 
+else: 
+    print("No")
+
+
+# A) current date and time
+
+from datetime import datetime
+
+# datetime object containing current date and time
+now = datetime.now()
+ 
+print("now =", now)
+
+# dd/mm/YY H:M:S
+dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+print("date and time =", dt_string)
+
+#B) current year 
+
+import calendar
+for i in range(1,12):
+  print(calendar.month_name[i])
+
+  month of the year
+
+# C)  month of the year 
+import datetime
+
+today = datetime.date.today()
+print(today)
+
+print('Month:', today.month)
+
+# D) week number of the year
+from datetime import date
+
+weekNumber = date.today().isocalendar()[1]
+print ('Week number:', weekNumber)
+
+# E) weekday of the week
+import datetime 
+import calendar 
+  
+def findDay(date): 
+    born = datetime.datetime.strptime(date, '%d %m %Y').weekday() 
+    return (calendar.day_name[born]) 
+   
+date = '03 02 2019'
+print(findDay(date)) 
+
+# F) day of year
+import datetime
+today = datetime.datetime.now()
+day_of_year = (today - datetime.datetime(today.year, 1, 1)).days + 1
+print(day_of_year)
+
+# G)Day of the month
+import datetime
+
+x = datetime.datetime.now()
+print(x)
+
+# question 3)
+from datetime import date, timedelta
+dt = date.today() - timedelta(30)
+print('Current Date :',date.today())
+print('30 days before Current Date :',dt)
+
+
+# question 4)
+import re
+def text_match(text):
+        patterns = '^[a-zA-Z0-9_]*$'
+        if re.search(patterns,  text):
+                return 'Found a match!'
+        else:
+                return('Not matched!')
+
+print(text_match("This is question 4"))

@@ -1,0 +1,48 @@
+#Task 1
+f = open("Shakespeare.txt", "r")
+
+  print(f.read())
+
+# how many words
+f = open("Shakespeare.txt", "r")
+data = f.read()
+words = data.split()
+
+print('Number of words in text file :', len(words))
+
+# how many lines
+open("Shakespeare.txt").read().count('\n')
+
+# how many vowels
+f = open("Shakespeare.txt, "r")
+def Check_Vow(string, vowels): 
+    final = [each for each in string if each in vowels] 
+    print(len(final)) 
+     
+      
+string = f.read()
+vowels = "AaEeIiOoUu"
+
+Check_Vow(string, vowels); 
+
+# how many numbers
+
+f = open ("Shakespeare.txt","r")
+total_numbers = 0
+for line in f :
+   parts = line.split()
+   total_numbers += len(parts)
+print (total_numbers)
+
+#Task 2
+
+#read string, reverse input
+
+y = input ("Enter text: ")
+
+x= input ("Enter text: ")
+print ([::-1])
+
+
+f.write(y)
+f.write(x)
