@@ -1,0 +1,70 @@
+#question 1
+#Given dictionary is consisted of vehicles and their weights in kilograms. 
+#Construct a list of the names of vehicles with weight below 5000 kilograms.
+ #In the same list comprehension make the key names all upper case.
+#dict={"Sedan": 1500, "SUV": 2000, "Pickup": 2500, "Minivan": 1600, "Van": 2400, "Semi": 13600, "Bicycle": 7, "Motorcycle": 110}
+
+from IPython.utils.sysinfo import pkg_commit_hash
+dict={"Sedan": 1500, "SUV": 2000, "Pickup": 2500, "Minivan": 1600, "Van": 2400, "Semi": 13600, "Bicycle": 7, "Motorcycle": 110}
+
+
+lst = [i.upper() for i in dict if dict[i]<5000]
+
+print(lst)
+
+#question 2
+#3. Create a dictionary (in your file) of names and birthdays. When you run your program it should ask the user to enter a name,
+# and return the birthday of that person back to them.
+lst1=[10, 20, 30, 40, 50, 60]
+lst2 = list(map(lambda x: x**2, lst1))
+print(lst2)
+
+
+#question 3
+# Create a dictionary (in your file) of names and birthdays.
+ #When you run your program it should ask the user to enter a name,
+ #and return the birthday of that person back to them.
+
+if __name__ == '__main__':
+
+    birthdays = {
+        'Albert Einstein': '03/14/1879',
+        'Benjamin Franklin': '01/17/1706',
+        'Ada Lovelace': '12/10/1815',
+        'Donald Tr
+        
+        pkg_commit_hash
+        
+        
+        ump': '06/14/1946',
+        'Rowan Atkinson': '01/6/1955'}
+
+
+
+    print('Welcome to the birthday dictionary. We know the birthdays of:')
+    for name in birthdays:
+        print(name)
+
+
+    print('Who\'s birthday do you want to look up?')
+    name = input()
+    if name in birthdays:
+        print('{}\'s birthday is {}.'.format(name, birthdays[name]))
+    else:
+        print(
+
+
+#question 4
+# Write a password generator in Python. Be creative with how you generate passwords 
+#- strong passwords have a mix of lowercase letters, uppercase letters, numbers, and symbols. 
+#The passwords should be random, generating a new password every time the user asks for a new password. 
+#Include your code in a main method.
+
+
+
+import random
+
+s = "abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()?"
+passlen = 8
+p =  "".join(random.sample(s,passlen ))
+print p)
