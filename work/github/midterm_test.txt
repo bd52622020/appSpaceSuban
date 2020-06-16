@@ -1,0 +1,84 @@
+
+1. PySpark
+
+a. What is an RDD?
+is a resillient distibuted dataset. a core data structure of spark. it is a read only partinoed collection of records.
+
+b. What is a DAG ?
+DAG, directed acyclic graph  in spark each job creates a DAG of task stages to be performed on the cluster
+
+c. What is the role of a spark driver in the spark cluster?
+Spark driver is responsible for defining  transformations and actions on knowledge RDDs, the driver creates SparkContext to a given master an presents RDD graphs to master.
+
+d. Is Spark fault Tolerant and how does Spark achieve that?
+it is fault tolerant as it includes a redundant component which lets it recover any lost data. The data is recovered by redundant data,
+ as RDD datasets  run in parallel and are partitioned across nodes in clusters and offer actions and transformations.
+
+
+2. Shell
+
+a. How to make a shell script executable ?
+
+Open the terminal. Go to the place where you would like to create your script.
+Create a file with . sh extension.
+Write the script in the file using an editor.
+Make the script executable with command chmod +x <fileName>.
+Run the script using ./<fileName>.
+
+b. What is the use of “#!/bin/bash” ?
+ is it the first line of every script 
+
+c. How do you resolve variable in a shellscript ?
+
+
+
+
+4
+
+Hadoop
+
+a. What are the core components of Hadoop?
+the 3 core components of the hadoop framework
+
+mapReduce- is a tool used to operate through big amounts of data through parallel.
+
+HDFS- this is a javabased distributed file system that can be used to reserve data that has not be previously organised.
+
+YARN A framework tool used to manage handling and scheduling resource requests made by the distributed applications.
+
+Name nodes
+name nodes is the master node in the hadoop distributed file cluster, there is a single name node and it is responsiblities are to store the hadoop distrubuted file systems 
+meta data, this keeps track of all the files in the hadoop distributed file system it keep information such as file names the permissions it has and to which 
+user the file belongs to and where the file is located. It stores information on what blocks of the file system
+are mapped to each file that are present to the hdfs. this is all stored on the ram. it occupies around 1gb of ram.
+
+data node
+the data node are responsible for storing and retrieving the data as instructed by the name node.
+ the data node regularly reports back to the name node with its current status and the list of all the file blocks they are being stored. it stores multiple files in the hadoop file system.
+
+What does jps command do in Hadoop
+Jps is used to see if the hadoop daemoon is running correctly.
+
+
+What do you mean by metadata in Hadoop?
+
+metadata is a filesystem that is managed by hadoop.
+Metadata provides information about multiple aspects of the data;
+the use of metadata is to summarise information and track and making working with data easier. some of information managed by metadata is
+· Means of creation of the data
+· Purpose of the data
+· Time and date of creation
+· Creator or author of the data
+· Location on a computer network where the data was created
+· Standards used
+· File size
+· Data quality
+· Source of the data
+· Process used to create the data.
+
+
+What is a block in HDFS, why block size 64MB?
+
+This isthe smallest unit of data that a file system can store. if you need to store a file that is between 1k and 60mb only one block is required anything above 64mb
+ will need a secondary block. the reason why such a large size of 64mb is used compared to the linux system is because a larger block size will minimize the cost and 
+reduce the metadata information generated per block
