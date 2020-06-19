@@ -1,0 +1,37 @@
+What is the purpose local or local[*] in a scala code ?
+
+Local[*] is used to run spark locally with as many worker threads as 
+logical cores on your machine. The code you have given will specify a master url for a 
+local to run run locally with all the threads on your machine.
+
+
+
+What is the difference between map and flatMap ?
+
+map and flatMap are similar, in the sense they take a line from the input
+RDD and apply a function on it. The way they differ is that the function in map returns only one element, 
+while function in flatMap can return a list of elements
+(0 or more) as an iterator. Also, the output of the flatMap is flattened.
+
+
+
+What are two fundamental methods of creating a RDD in spark
+
+There are two ways to create RDDs: parallelize an existing collection and reference an external dataset.
+Spark supports text files, SequenceFiles, and other Hadoop InputFormats.
+RDDs support two types of operations: transformations and actions.
+
+
+
+What is the difference between map and mapValues ?
+
+There is a difference between the two: mapValues is only applicable for PairRDDs, 
+meaning RDDs of the form RDD[(A, B)]. In that case, mapValues operates on the value 
+only (the second part of the tuple), while map operates on the entire record 
+(tuple of key and value)
+
+
+
+What transformation helps us summarize data according to a key?
+
+reducebyKey will assign key : value pairs to the data.
